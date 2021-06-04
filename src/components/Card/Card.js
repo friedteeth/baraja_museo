@@ -18,7 +18,7 @@ function Card({currentCard}) {
     return (
         <div>
             {/* <img src={cardPNG} alt={currentCard} /> */}
-            <img src={process.env.PUBLIC_URL + 'deck/' + currentCard + '.png'} alt={currentCard} width={"10%"}/>
+            <img src={process.env.PUBLIC_URL + 'deck/' + currentCard + '.png'} alt={currentCard} width={"200px"}/>
         </div>
     )
 }

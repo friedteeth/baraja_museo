@@ -1,5 +1,6 @@
 import React from 'react';
 import Deck from './components/Deck/Deck';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
