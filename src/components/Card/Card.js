@@ -2,6 +2,7 @@
 import React from 'react';
 // import red_back from '../../assets/deck/red_back.png';
 import PropTypes from 'prop-types';
+import './Card.css';
 
 function Card({currentCard}) {
     // const [cardPNG, setCardPNG] = useState(red_back);
@@ -16,15 +17,17 @@ function Card({currentCard}) {
     //     });
 
     return (
-        <div>
+        <div >
             {/* <img src={cardPNG} alt={currentCard} /> */}
-            <img src={process.env.PUBLIC_URL + 'deck/' + currentCard + '.png'} alt={currentCard} width={"200px"}/>
+            <img id={currentCard} src={process.env.PUBLIC_URL + 'deck/' + currentCard + '.png'} alt={currentCard} width={"200px"}/>
+            {/* <img id={followingCard} src={process.env.PUBLIC_URL + 'deck/' + followingCard + '.png'} alt={followingCard} width={"200px"}/> */}
         </div>
     )
 }
 
 Card.propTypes = {
-    currentCard: PropTypes.string
+    currentCard: PropTypes.string,
+    // followingCard: PropTypes.string
 }
 
 export default Card;
