@@ -1,0 +1,4 @@
+.form-group {
+    display: inline-flex !important;
+    max-width: 300px;
+}

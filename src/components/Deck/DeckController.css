@@ -1,0 +1,19 @@
+/* img {
+    position: absolute;
+}
+
+img:first-of-type {
+    z-index: 10;
+}
+
+.forced-img {
+    position: unset;
+    z-index: 0;
+} */
+
+
+.animation-div > div {
+    position: absolute;
+    left: calc(50vw - 100px);
+    z-index: 100;
+}

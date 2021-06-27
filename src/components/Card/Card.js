@@ -1,33 +1,23 @@
-// import React, { useState } from 'react';
 import React from 'react';
-// import red_back from '../../assets/deck/red_back.png';
 import PropTypes from 'prop-types';
+// import anime from 'animejs';
 import './Card.css';
 
-function Card({currentCard}) {
-    // const [cardPNG, setCardPNG] = useState(red_back);
-
-    // console.log(currentCard);
-    // import('../../assets/deck/' + {currentCard} + '.png')
-    // import('../../assets/deck/red_back.png')
-    //     .then((card) => {
-    //         console.log(typeof card);
-    //         console.log(card);
-    //         setCardPNG(card)
-    //     });
+function Card({card}) {
 
     return (
-        <div >
-            {/* <img src={cardPNG} alt={currentCard} /> */}
-            <img id={currentCard} src={process.env.PUBLIC_URL + 'deck/' + currentCard + '.png'} alt={currentCard} width={"200px"}/>
-            {/* <img id={followingCard} src={process.env.PUBLIC_URL + 'deck/' + followingCard + '.png'} alt={followingCard} width={"200px"}/> */}
-        </div>
+        <img
+            id={card}
+            src={`${process.env.PUBLIC_URL}deck/${card}.png`}
+            alt={card}
+            width={"200px"}
+        />
     )
 }
 
 Card.propTypes = {
-    currentCard: PropTypes.string,
-    // followingCard: PropTypes.string
+    card: PropTypes.string,
+    animate: PropTypes.bool
 }
 
 export default Card;

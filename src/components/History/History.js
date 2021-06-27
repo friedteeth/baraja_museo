@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './History.css'
 
 function History({history}) {
 
     return (
-        <div className="row">
+        <div className="row history">
             {history.map((card, index) => {
                 return (
                     <div key={"key-" + index} className="col mb-4">
