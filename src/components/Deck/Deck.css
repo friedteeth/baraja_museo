@@ -2,3 +2,13 @@
     display: inline-flex !important;
     max-width: 300px;
 }
+
+#base_img {
+    z-index: 0;
+}
+
+.block {
+    width: 50vw;
+    height: 100%;
+    background-color: red;
+}

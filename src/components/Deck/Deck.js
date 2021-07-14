@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 import DeckController from  './DeckController';
 import cardSet from '../../card_set';
 import History from '../History/History';
+import Toolkit from '../Toolkit/Toolkit';
+import Navbar from '../Navbar/Navbar';
 import './Deck.css';
 import {shuffleArray, useInterval} from '../../utils/utils';
 // import anime from 'animejs';
 
 function Deck() {
-    const TOTAL_CARDS = 52;
+    // const TOTAL_CARDS = 52;
     const [deck, setDeck] = useState(() => {
         let newDeck = [...cardSet];
         shuffleArray(newDeck);
@@ -75,7 +77,7 @@ function Deck() {
         if (deck.length <= 0) {
             resetDeck();
         } else {
-            setButton(isRunning ? "Comenzar" : "Pausar");
+            setButton(isRunning ? "Continuar" : "Pausar");
             setIsRunning(!isRunning);
         }
     }
@@ -84,23 +86,32 @@ function Deck() {
 
     return (
         <div>
-            <div>
-                <div className="input-group form-group">
-                    <input type="range" className="form-control" min="0.1" step="0.1" max="5" onInput={(e) => setSpeed(e.target.value*1000)}/>
-                    <button
-                        className="btn btn-primary"
-                        onClick={buttonHandler}
-                    >{button}</button>
+            <Navbar></Navbar>
+            <div className="row pt-1 m-0">
+                <div className="col-md-8">
+                    <DeckController
+                        cardsQueue={cardsQueue}
+                        play={play}
+                        speed={speed}
+                    ></DeckController>  
+                    <img
+                        id="base_img"
+                        src={`${process.env.PUBLIC_URL}deck/red_back.png`}
+                        alt={"red_back"}
+                        width={"200px"}
+                    />
+                </div>
+                <div className="col-md-4">
+                    <Toolkit
+                        card={card}
+                        button={button}
+                        speed={speed}
+                        deckLength={deck.length}
+                        buttonHandler={buttonHandler}
+                        setSpeed = {setSpeed}
+                    ></Toolkit>
                 </div>
             </div>
-            <div>
-                {card} | {speed * 0.001}s | {deck.length}/{TOTAL_CARDS}
-            </div>
-            <DeckController
-                cardsQueue={cardsQueue}
-                play={play}
-                speed={speed}
-            ></DeckController>
             { deck.length <= 0 ? <History history={history}></History> : ''}
         </div>
     )

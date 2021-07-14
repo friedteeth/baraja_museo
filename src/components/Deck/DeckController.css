@@ -14,6 +14,12 @@ img:first-of-type {
 
 .animation-div > div {
     position: absolute;
-    left: calc(50vw - 100px);
+    left: calc(33vw - 100px);
     z-index: 100;
+}
+
+@media (max-width: 576px) {
+    .animation-div > div {
+        left: calc(50vw - 100px) !important;
+    }
 }

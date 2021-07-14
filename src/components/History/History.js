@@ -5,12 +5,17 @@ import './History.css'
 function History({history}) {
 
     return (
-        <div className="row history">
+        <div className="history pt-4">
+            <h2 className="text-white">Historial de cartas</h2>
             {history.map((card, index) => {
                 return (
-                    <div key={"key-" + index} className="col mb-4">
-                        <img src={process.env.PUBLIC_URL + 'deck/' + card + '.png'} alt={card} width={"75px"}/>
-                    </div>
+                    <img
+                        key={"key-" + index}
+                        className="m-1"
+                        src={process.env.PUBLIC_URL + 'deck/' + card + '.png'}
+                        alt={card}
+                        width={"50px"}
+                    />
                 );
             })}
             

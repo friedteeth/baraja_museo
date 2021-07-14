@@ -8,7 +8,7 @@ import './DeckController.css';
 function DeckController({cardsQueue, play, speed}) {
 
     return (
-        <div className={"animation-div"}>
+        <div className={"animation-div m-3"}>
             {cardsQueue.map((card, i) => {
                 const shouldPlay = play && (i == 1);
                 const [x, r] = getAnimationAttributes();
@@ -16,7 +16,6 @@ function DeckController({cardsQueue, play, speed}) {
                     <Animate
                         key={card}
                         play={shouldPlay}
-                        // start={{transform: "translateX(calc(50vw - 100px))"}}
                         end={{transform: `translateX(${x}px) translateY(-600px) rotate(${r}deg)`}}
                         delay={0.0001*speed}
                         duration={speed*0.001}
