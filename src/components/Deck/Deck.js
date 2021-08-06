@@ -16,7 +16,7 @@ function Deck() {
         shuffleArray(newDeck);
         return newDeck;
     });
-    const [card, setCard] = useState('red_back');
+    const [card, setCard] = useState('00');
     const [cardsQueue, setCardsQueue] = useState([card]);
     const [history, setHistory] = useState([]);
     const [isRunning, setIsRunning] = useState(false);
@@ -34,14 +34,14 @@ function Deck() {
             shuffleArray(newDeck);
             return newDeck;
         });
-        setCard('red_back');
+        setCard('00');
         setHistory([])
         setIsRunning(true);
         setButton("Pausar")
     }
 
     const nextCard = () => {
-        if (card == 'red_back') {
+        if (card == '00') {
             setCard(deck[0]);
             setCardsQueue(() => {
                 if (cardsQueue.length > 1) {
@@ -96,8 +96,8 @@ function Deck() {
                     ></DeckController>  
                     <img
                         id="base_img"
-                        src={`${process.env.PUBLIC_URL}deck/red_back.png`}
-                        alt={"red_back"}
+                        src={`${process.env.PUBLIC_URL}deck/00.png`}
+                        alt={"00"}
                         width={"200px"}
                     />
                 </div>
