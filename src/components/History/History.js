@@ -5,7 +5,7 @@ import './History.css'
 function History({history}) {
 
     return (
-        <div className="history pt-4">
+        <div className="history pt-4 pb-5">
             <h2 className="text-white">Historial de cartas</h2>
             {history.map((card, index) => {
                 return (
