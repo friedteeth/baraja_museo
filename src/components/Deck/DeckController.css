@@ -12,9 +12,14 @@ img:first-of-type {
 } */
 
 
+.animation-div {
+    display: flex;
+    justify-content: center;
+}
+
 .animation-div > div {
     position: absolute;
-    left: calc(33vw - 100px);
+    /* left: calc(33vw - 100px); */
     z-index: 100;
 }
 

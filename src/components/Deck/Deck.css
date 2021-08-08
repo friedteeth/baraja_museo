@@ -12,3 +12,16 @@
     height: 100%;
     background-color: red;
 }
+
+.app-container {
+    margin: auto;
+    padding-bottom: 2rem;
+}
+
+.deck-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 15rem;
+    min-height: 26rem;
+}
