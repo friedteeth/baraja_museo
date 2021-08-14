@@ -15,7 +15,6 @@
 
 .app-container {
     margin: auto;
-    padding-bottom: 2rem;
 }
 
 .deck-container {
@@ -23,5 +22,24 @@
     flex-direction: column;
     justify-content: space-around;
     min-width: 15rem;
-    min-height: 26rem;
+    min-height: 80vh;
+}
+
+.speed-controller {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-container {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.navbar {
+    padding: 0 !important;
+}
+
+img {
+    max-height: 60vh;
 }

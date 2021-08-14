@@ -28,7 +28,7 @@ function useInterval(callback, delay) {
 
 function getAnimationAttributes() {
     const x = (Math.random() * window.innerWidth) - (window.innerWidth/2);
-    const r = (Math.random() * 1080) - 540;
+    const r = (Math.random() * 360) - 180;
 
     return [x, r];
 }

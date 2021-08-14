@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import Card from '../Card/Card';
 import DeckController from  './DeckController';
 import cardSet from '../../card_set';
 import History from '../History/History';
@@ -15,7 +14,6 @@ import {
 } from "react-router-dom";
 
 function Deck() {
-    // const TOTAL_CARDS = 52;
     const [deck, setDeck] = useState(() => {
         let newDeck = [...cardSet];
         shuffleArray(newDeck);
@@ -114,14 +112,11 @@ function Deck() {
                                         speed={speed}
                                     ></DeckController>  
                                     <img
-                                        className="border"
                                         id="base_img"
-                                        src={`${process.env.PUBLIC_URL}deck/00.png`}
-                                        alt={"00"}
-                                        width={"200px"}
+                                        src={`${process.env.PUBLIC_URL}deck/t.png`}
                                     />
                                 </div>
-                                <input type="range" className="mx-auto" min="0.1" step="0.1" max="5" onInput={(e) => setSpeed(e.target.value*1000)}/>
+                                <input type="range" className="speed-controller" min="0.1" step="0.1" max="5" onInput={(e) => setSpeed(e.target.value*1000)}/>
                             </div>
                         </Route>
                         <Route path="/galeria">
@@ -131,7 +126,7 @@ function Deck() {
                 </Router>
             </div>
             <footer className="footer text-center text-lg-start bg-light text-muted">
-                <div className="text-center p-2 bg-white">
+                <div className="text-center p-1 bg-white">
                     © 2021&nbsp;
                     <a className="text-reset fw-bold" href="https://www.inah.gob.mx/red-de-museos/212-museo-de-guadalupe">Museo de Guadalupe</a>
                 </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import anime from 'animejs';
 import './Card.css';
 
 function Card({card}) {
@@ -10,7 +9,6 @@ function Card({card}) {
             id={card}
             src={`${process.env.PUBLIC_URL}deck/${card}.png`}
             alt={card}
-            width={"200px"}
         />
     )
 }

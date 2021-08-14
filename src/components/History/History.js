@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import './History.css'
 
 function History({history}) {
 
     return (
-        <div className="history pt-4 pb-5">
+        <div className="history">
             <h2 className="text-white">Historial de cartas</h2>
             {history.map((card, index) => {
                 return (
@@ -18,7 +21,11 @@ function History({history}) {
                     />
                 );
             })}
-            
+            <div>
+                <Link to="baraja">
+                    <FontAwesomeIcon icon={faPlay} size={"2x"}/>
+                </Link>
+            </div>
         </div>
     )
 }
