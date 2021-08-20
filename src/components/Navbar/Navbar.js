@@ -2,7 +2,7 @@ import React from 'react';
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-md navbar-light bg-light">
+        <nav className="navbar navbar-expand-md navbar-light navbar-custom">
             <a className="navbar-brand ms-4" href="/">Museo de Guadalupe</a>
 
             {/* <button className="navbar-toggler me-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">

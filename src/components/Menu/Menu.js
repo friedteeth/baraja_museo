@@ -13,7 +13,7 @@ function Menu() {
             </div>
             <div className="p-3">
                 <Link to="baraja">
-                    <FontAwesomeIcon icon={faPlay} size={"2x"}/>
+                    <FontAwesomeIcon className={"icon-button"} icon={faPlay} size={"2x"}/>
                 </Link>
             </div>
         </div>

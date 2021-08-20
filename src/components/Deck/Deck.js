@@ -125,8 +125,8 @@ function Deck() {
                     </Switch>
                 </Router>
             </div>
-            <footer className="footer text-center text-lg-start bg-light text-muted">
-                <div className="text-center p-1 bg-white">
+            <footer className="footer text-center text-lg-start text-muted">
+                <div className="text-center p-1">
                     © 2021&nbsp;
                     <a className="text-reset fw-bold" href="https://www.inah.gob.mx/red-de-museos/212-museo-de-guadalupe">Museo de Guadalupe</a>
                 </div>

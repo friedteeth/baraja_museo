@@ -8,6 +8,7 @@
 
 .footer {
   font-size: 0.8rem;
+  background-color: #EDBA00;
 }
 
 html {
@@ -22,4 +23,26 @@ body {
   background-size: cover;
   overflow-x: hidden;
   min-height: 100%;
+}
+
+.icon-button {
+  color: #EDBA00;
+}
+
+.icon-button:hover {
+  color:#BD9A00;
+  cursor: pointer;
+}
+
+.icon-button.disabled {
+  color:#8D5A00;
+}
+
+.icon-button.disabled:hover {
+  color:#8D5A00;
+  cursor: default;
+}
+
+.navbar-custom {
+  background-color: #EDBA00;
 }

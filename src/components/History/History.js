@@ -23,7 +23,7 @@ function History({history}) {
             })}
             <div>
                 <Link to="baraja">
-                    <FontAwesomeIcon icon={faPlay} size={"2x"}/>
+                    <FontAwesomeIcon className={"icon-button"} icon={faPlay} size={"2x"}/>
                 </Link>
             </div>
         </div>

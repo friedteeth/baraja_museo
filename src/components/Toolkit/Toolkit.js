@@ -9,14 +9,14 @@ function Toolkit({button, enableButton, playHandler, resetHandler}) {
     return (
         <div className="controller-container">
             <FontAwesomeIcon
-                className={"btn-icon" + (enableButton ? "" : " disabled")}
+                className={"icon-button" + (enableButton ? "" : " disabled")}
                 onClick={enableButton ? playHandler : "return false;"}
                 icon={button ? faPlay : faPause}
                 size={"3x"}
             />
-            <FontAwesomeIcon className={"btn-icon"} onClick={resetHandler} icon={faSyncAlt}/>
+            <FontAwesomeIcon className={"icon-button"} onClick={resetHandler} icon={faSyncAlt}/>
             <Link to="galeria">
-                <FontAwesomeIcon className={"btn-icon"} icon={faImages} size={"3x"}/>
+                <FontAwesomeIcon className={"icon-button"} icon={faImages} size={"3x"}/>
             </Link>
         </div>
     )
