@@ -93,9 +93,9 @@ function Deck() {
 
     return (
         <>
+            <Router>
             <Navbar></Navbar>
             <div className="app-container">
-                <Router>
                     <Switch>
                         <Route exact path="/">
                             <Menu></Menu>
@@ -132,8 +132,8 @@ function Deck() {
                             <Creditos></Creditos>
                         </Route>
                     </Switch>
-                </Router>
             </div>
+            </Router>
             <Footer></Footer>
         </>
     )

@@ -19,7 +19,7 @@ function Instrucciones() {
                     <b>Velocidad</b> - Arrastra la barra <img className={"slider-img"} src={`${process.env.PUBLIC_URL}slider.png`}></img>.
                 </li>
                 <li>
-                    <b>Historial</b> - Puedes ver el historial de cartas que han pasado dando clic en <FontAwesomeIcon className={"icon-color"} icon={faImages}/>.
+                    <b>Galería</b> - Puedes ver el historial de cartas que han pasado dando clic en <FontAwesomeIcon className={"icon-color"} icon={faImages}/>.
                 </li>
             </ul>
         </div>

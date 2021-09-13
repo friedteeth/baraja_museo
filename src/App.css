@@ -92,3 +92,16 @@ body {
 .slider-img {
   width: 8rem;
 }
+
+.nav-item a {
+  text-decoration: none !important;
+  color: black;
+}
+
+.nav-item a:hover {
+  color: grey;
+}
+
+.nav-item a::after {
+  content: "\00a0\00a0\00a0"
+}

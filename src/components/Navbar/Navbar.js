@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [collapse, setCollapse] = useState(false);
@@ -33,10 +33,13 @@ function Navbar() {
             >
                 <ul className={"navbar-nav mr-auto"}>
                     <li className={"nav-item"}>
-                        <a className={"nav-link"} href="/instrucciones">Instrucciones</a>
+                        <Link to={"/baraja"}>Baraja</Link>
                     </li>
                     <li className={"nav-item"}>
-                        <a className={"nav-link"} href="/creditos">Créditos</a>
+                        <Link to={"/instrucciones"}>Instrucciones</Link>
+                    </li>
+                    <li className={"nav-item"}>
+                        <Link to={"/creditos"}>Créditos</Link>
                     </li>
                 </ul>
             </div>

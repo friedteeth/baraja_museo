@@ -10,6 +10,9 @@ function Creditos() {
                     Salvador Loera Quiroz
                 </li>
                 <li>
+                    Mauro Talamantes Villagrana
+                </li>
+                <li>
                     José Ángel Rendón López
                 </li>
             </ul>
