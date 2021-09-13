@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImages, faSyncAlt, faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 import './Toolkit.css'
 
 function Toolkit({button, enableButton, playHandler, resetHandler}) {
+    const handleHistory = () => {
+        if (!button) {
+            playHandler();
+        }
+    }
     return (
         <div className="controller-container">
             <FontAwesomeIcon
@@ -15,8 +20,8 @@ function Toolkit({button, enableButton, playHandler, resetHandler}) {
                 size={"3x"}
             />
             <FontAwesomeIcon className={"icon-button"} onClick={resetHandler} icon={faSyncAlt}/>
-            <Link to="galeria">
-                <FontAwesomeIcon className={"icon-button"} icon={faImages} size={"3x"}/>
+            <Link to={"/galeria"}>
+                <FontAwesomeIcon className={"icon-button"} onClick={handleHistory} icon={faImages} size={"3x"}/>
             </Link>
         </div>
     )

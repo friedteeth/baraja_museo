@@ -14,7 +14,10 @@
 }
 
 .app-container {
+    min-height: 95vh;
     margin: auto;
+    display: flex;
+    align-items: center;
 }
 
 .deck-container {

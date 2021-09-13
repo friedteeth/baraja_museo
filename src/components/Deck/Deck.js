@@ -4,7 +4,10 @@ import cardSet from '../../card_set';
 import History from '../History/History';
 import Toolkit from '../Toolkit/Toolkit';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 import Menu from '../Menu/Menu';
+import Instrucciones from '../Instrucciones/Instrucciones';
+import Creditos from '../Creditos/Creditos';
 import './Deck.css';
 import {shuffleArray, useInterval} from '../../utils/utils';
 import {
@@ -122,15 +125,16 @@ function Deck() {
                         <Route path="/galeria">
                             <History history={history}></History>
                         </Route>
+                        <Route path="/instrucciones">
+                            <Instrucciones></Instrucciones>
+                        </Route>
+                        <Route path="/creditos">
+                            <Creditos></Creditos>
+                        </Route>
                     </Switch>
                 </Router>
             </div>
-            <footer className="footer text-center text-lg-start text-muted">
-                <div className="text-center p-1">
-                    © 2021&nbsp;
-                    <a className="text-reset fw-bold" href="https://www.inah.gob.mx/red-de-museos/212-museo-de-guadalupe">Museo de Guadalupe</a>
-                </div>
-            </footer>
+            <Footer></Footer>
         </>
     )
 }

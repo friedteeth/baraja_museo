@@ -7,13 +7,22 @@ import './Menu.css';
 function Menu() {
     return (
         <div className="card menu-card">
+            <img
+                src={`${process.env.PUBLIC_URL}LogoMuseoBlanco.png`}
+                className={"menu-img"}
+                alt={"Museo de Guadalupe"}
+            ></img>
             <div className="card-body">
                 <h1 className="card-title">LOTERIA</h1>
-                <small className="card-subtitle">Figuras femeninas en el arte Barroco de México</small>
+                <h6>Figuras femeninas en el arte Barroco de México</h6>
             </div>
             <div className="p-3">
                 <Link to="baraja">
-                    <FontAwesomeIcon className={"icon-button"} icon={faPlay} size={"2x"}/>
+                    <FontAwesomeIcon
+                        className={"icon-button"}
+                        icon={faPlay}
+                        size={"3x"}
+                    />
                 </Link>
             </div>
         </div>

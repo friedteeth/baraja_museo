@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faUndo } from '@fortawesome/free-solid-svg-icons';
 import './History.css'
 
 function History({history}) {
@@ -23,7 +23,7 @@ function History({history}) {
             })}
             <div>
                 <Link to="baraja">
-                    <FontAwesomeIcon className={"icon-button"} icon={faPlay} size={"2x"}/>
+                    <FontAwesomeIcon className={"icon-button"} icon={faUndo} size={"2x"}/>
                 </Link>
             </div>
         </div>

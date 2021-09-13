@@ -1,17 +1,9 @@
 .menu-card {
-    max-width: 18rem;
-    min-height: 13rem;
+    max-width: 80vw;
+    min-height: 25vh;
     align-self: center;
     text-align: center;
     background-color: transparent !important;
     color: white;
-}
-
-.card-title {
-    font-size: 4rem;
-    margin: unset !important;
-}
-
-.card-subtitle {
-    font-size: 0.7rem;
+    display: block !important;
 }
